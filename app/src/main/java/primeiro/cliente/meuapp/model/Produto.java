@@ -6,13 +6,20 @@ import primeiro.cliente.meuapp.api.AppUtil;
 import primeiro.cliente.meuapp.repositorio.InterfaceRepositorio;
 
 public class Produto {
-  
+    private int id;
     private  String nomeProduto;
     private  String marcaProduto;
     private  Float precoProduto;
     private  int qtdProduto;
     private  int idProduto;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNomeProduto() {
         return nomeProduto;

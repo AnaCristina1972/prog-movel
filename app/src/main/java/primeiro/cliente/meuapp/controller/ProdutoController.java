@@ -7,6 +7,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+import primeiro.cliente.meuapp.DataModel.ClienteDataModel;
 import primeiro.cliente.meuapp.DataModel.ProdutoDataModel;
 import primeiro.cliente.meuapp.api.AppUtil;
 import primeiro.cliente.meuapp.connectionFactory.Factory;
@@ -45,15 +46,13 @@ public class ProdutoController extends Factory implements InterfaceRepositorio<P
     }
 
     @Override
-    public boolean deletar(Produto obj) {
-        dados =new ContentValues();
-        dados.put(ProdutoDataModel.ID,obj.getIdProduto());
+    public boolean deletar(int id) {
 
-        return true;
+        return deleteById(ClienteDataModel.TABELA,id);
     }
 
     @Override
-    public List<Produto> listar(Produto obj) {
+    public List<Produto> listar() {
         List<Produto> listarPro=new ArrayList<>();
         return null;
     }

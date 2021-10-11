@@ -10,7 +10,7 @@ public interface InterfaceRepositorio<T> {
     //Alterar
     public  boolean alterar(T obj);
     //Deletar
-    public boolean deletar(T obj);
+    public boolean deletar(int id);
     //Listar
-    public List<T> listar(T obj);
+    public List<T> listar();
 }

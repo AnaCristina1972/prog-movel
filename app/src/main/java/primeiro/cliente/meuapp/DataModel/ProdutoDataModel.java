@@ -2,7 +2,7 @@ package primeiro.cliente.meuapp.DataModel;
 
 public class ProdutoDataModel {
     public static  final  String TABELA = " produto";
-    public static  final  String ID = "idProd";
+    public static  final  String ID = "id";
     public static  final  String NOMEPROD = " nomeProd";
     public static  final  String  MARCAPRO= " marcaProd";
     public static  final  String  PRECOPROD= " precoProd";

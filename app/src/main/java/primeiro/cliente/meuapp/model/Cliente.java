@@ -1,13 +1,8 @@
 package primeiro.cliente.meuapp.model;
 
-import android.util.Log;
-
-import primeiro.cliente.meuapp.api.AppUtil;
-import primeiro.cliente.meuapp.repositorio.InterfaceRepositorio;
-
 public class Cliente {
    
-    private int idCliente;
+    private int id;
     private String nomeCliente;
     private String telefone;
     private String telefone2;
@@ -18,12 +13,18 @@ public class Cliente {
 
     }
 
-    public int getIdCliente() {
-        return idCliente;
+    public Cliente() {
+        this.nomeCliente = nomeCliente;
+        this.telefone = telefone;
+
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNomeCliente() {

@@ -31,27 +31,30 @@ public class ClienteController extends Factory implements InterfaceRepositorio<C
 
     }
 
+
+    @Override
+    public boolean deletar(int id) {
+
+        return deleteById(ClienteDataModel.TABELA,id);
+    }
+
     @Override
     public boolean alterar(Cliente obj) {
         dados = new ContentValues();
-        dados.put(ClienteDataModel.ID,obj.getIdCliente());
+        dados.put(ClienteDataModel.ID,obj.getId());
         dados.put(ClienteDataModel.NOME,obj.getNomeCliente());
         dados.put(ClienteDataModel.TEL1,obj.getTelefone());
         dados.put(ClienteDataModel.TEL2,obj.getTelefone2());
-        return true;
+        return update(ClienteDataModel.TABELA,dados);
     }
 
-    @Override
-    public boolean deletar(Cliente obj) {
-        dados = new ContentValues();
-        dados.put(ClienteDataModel.ID,obj.getIdCliente());
-        return true;
-    }
+
 
     @Override
-    public List<Cliente> listar(Cliente obj) {
+    public List<Cliente> listar() {
 
        List<Cliente> lista=new ArrayList<>();
-       return lista;
+
+       return getAllClientes(ClienteDataModel.TABELA);
     }
 }

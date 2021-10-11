@@ -6,7 +6,7 @@ public class ClienteDataModel  {
     public static final String TABELA = " cliente ";
 
     //atributos da tabela
-    public static final String ID = "idCliente";
+    public static final String ID = "id";
     public static final String NOME = "nomeCliente";
     public static final String TEL1 = "telCliente1";
     public static final String TEL2 = "telCliente2";
